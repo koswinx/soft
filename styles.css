@@ -27,7 +27,6 @@ nav {
     color: black;
     font-size: 18px;
     border-radius: 5px;
-    text-align: center;
 }
 
 .back-btn {
@@ -37,6 +36,7 @@ nav {
     text-decoration: none;
 }
 
+/* Mines */
 #grid {
     display: grid;
     grid-template-columns: repeat(5, 50px);
