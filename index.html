@@ -1,47 +1,85 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penalty Shoot Out: Street</title>
+    <title>Прогнозы 1win</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Penalty Shoot Out: Street</h1>
+        <h1>Прогнозы 1win</h1>
     </header>
 
+    <nav>
+        <button class="game-btn" data-game="mines">Mines</button>
+        <button class="game-btn" data-game="bombucks">Bombucks</button>
+        <button class="game-btn" data-game="penalty">Penalty Shoot Out: Street</button>
+    </nav>
+
     <main>
-        <h2>Удар по воротам</h2>
-        <div id="goal">
-            <!-- 3x5 сетка -->
-            <div class="row">
-                <div class="cell" data-pos="0"></div>
-                <div class="cell" data-pos="1"></div>
-                <div class="cell" data-pos="2"></div>
-                <div class="cell" data-pos="3"></div>
-                <div class="cell" data-pos="4"></div>
+        <!-- Mines -->
+        <section id="mines" class="game-section">
+            <h2>Прогнозы для Mines</h2>
+            <p>Выберите количество мин:</p>
+            <div id="mines-options">
+                <button class="mine-btn" data-mines="1">1</button>
+                <button class="mine-btn" data-mines="3">3</button>
+                <button class="mine-btn" data-mines="5">5</button>
+                <button class="mine-btn" data-mines="7">7</button>
             </div>
-            <div class="row">
-                <div class="cell" data-pos="5"></div>
-                <div class="cell" data-pos="6"></div>
-                <div class="cell" data-pos="7"></div>
-                <div class="cell" data-pos="8"></div>
-                <div class="cell" data-pos="9"></div>
+            <div id="grid"></div>
+            <p id="mines-recommendation">Нажмите "Обновить" для прогноза</p>
+            <button id="mines-refresh">🔄 Обновить</button>
+        </section>
+
+        <!-- Bombucks -->
+        <section id="bombucks" class="game-section">
+            <h2>Прогнозы для Bombucks</h2>
+            <p>Выберите размер сетки:</p>
+            <div id="bombucks-options">
+                <button class="grid-btn" data-size="2x3" data-mines="3">2x3</button>
+                <button class="grid-btn" data-size="3x6" data-mines="6">3x6</button>
+                <button class="grid-btn" data-size="4x9" data-mines="9">4x9</button>
+                <button class="grid-btn" data-size="5x12" data-mines="12">5x12</button>
+                <button class="grid-btn" data-size="6x15" data-mines="15">6x15</button>
             </div>
-            <div class="row">
-                <div class="cell" data-pos="10"></div>
-                <div class="cell" data-pos="11"></div>
-                <div class="cell" data-pos="12"></div>
-                <div class="cell" data-pos="13"></div>
-                <div class="cell" data-pos="14"></div>
+            <div id="bombucks-prediction" onclick="generateBombucksPrediction()">0</div>
+            <p>Нажмите, чтобы обновить</p>
+        </section>
+
+        <!-- Penalty Shoot Out: Street -->
+        <section id="penalty" class="game-section">
+            <h2>Прогноз для Penalty Shoot Out: Street</h2>
+            <div id="goal">
+                <div class="row">
+                    <div class="cell" data-pos="0"></div>
+                    <div class="cell" data-pos="1"></div>
+                    <div class="cell" data-pos="2"></div>
+                    <div class="cell" data-pos="3"></div>
+                    <div class="cell" data-pos="4"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" data-pos="5"></div>
+                    <div class="cell" data-pos="6"></div>
+                    <div class="cell" data-pos="7"></div>
+                    <div class="cell" data-pos="8"></div>
+                    <div class="cell" data-pos="9"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" data-pos="10"></div>
+                    <div class="cell" data-pos="11"></div>
+                    <div class="cell" data-pos="12"></div>
+                    <div class="cell" data-pos="13"></div>
+                    <div class="cell" data-pos="14"></div>
+                </div>
             </div>
-        </div>
-        <p>Нажмите на экран, чтобы получить новый прогноз</p>
+            <p>Нажмите на экран, чтобы обновить прогноз</p>
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 Penalty Shoot Out: Street | Только для развлечений</p>
+        <p>© 2025 Прогнозы 1win | Только для развлечений</p>
     </footer>
 
     <script src="script.js"></script>
