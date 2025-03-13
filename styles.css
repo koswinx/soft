@@ -1,0 +1,49 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: #e53935;
+    padding: 15px;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+#goal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active {
+    background: #ffeb3b;
+}
+
+footer {
+    background: #e53935;
+    padding: 10px;
+    margin-top: 20px;
+}
